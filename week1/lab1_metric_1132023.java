@@ -17,7 +17,7 @@ public class lab1_metric_1132023 {
         /*
          * initialization of all 3 doubles at once
          * weight is expected to be rounded up to a whole # though
-         * trueInches refers to total height in inches (ft + inches)
+         * centimeters refers to total height in cm (meters * 100)
          */
         double meters, centimeters, weight;
         double bmi; // must be a double to satisfy math
@@ -35,7 +35,7 @@ public class lab1_metric_1132023 {
             }
             name = sc.nextLine();
 
-            System.out.print("how many meters tall are you? ");
+            System.out.print("how many meters tall are you? "); // input can either be whole or a decimal
             while (!sc.hasNextDouble())
             {
                 System.out.print("invalid! try again! ");
@@ -54,7 +54,7 @@ public class lab1_metric_1132023 {
 
             // math
             centimeters = (meters*100);
-            //System.out.println(inches); // testing if math works
+            //System.out.println(centimeters); // testing if math works
             bmi = weight / (centimeters*centimeters);
             bmi = bmi * 10000;
             //System.out.println(bmi); // testing if math works
